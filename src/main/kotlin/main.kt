@@ -6,10 +6,10 @@ fun main() {
 }
 
 fun printPeople(likes: Int) {
-    val people = if (likes % 10 == 1) "человеку" else "людям"
+    val people = if ((likes % 10 == 1)&&(likes % 100 != 11)) "человеку" else "людям"
     println("Понравилось $likes $people")
 }
 
 fun testPeople() {
-    (0..50).forEach { printPeople(it) }
+    (100..150).forEach { printPeople(it) }
 }
